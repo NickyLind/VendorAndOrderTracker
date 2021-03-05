@@ -1,42 +1,34 @@
-// using System.Collections.Generic;
-// using System;
-// using Microsoft.AspNetCore.Mvc;
-// using ProjectName.Models;
+using Microsoft.AspNetCore.Mvc;
+using VendorAndOrderTracker.Models;
+using System.Collections.Generic;
 
-// namespace ProjectName.Controllers
-// {
-//   public class ClassNameController : Controller
-//   {
-//     [HttpGet("/classname")]
-//     public ActionResult Index()
-//     {
-//       List<Class> allClass = Class.GetAll();
-//       return View(allClass);
-//     }
+namespace VendorAndOrderTracker.Controllers
+{
+  public class OrdersControllers : Controller
+  {
+    [HttpGet("/vendors/{vendorId}/orders/new")]
+    public ActionResult New(int vendorId)
+    {
+      Vendor vendor = Vendor.Find(vendorId);
+      return View(vendor);
+    }
 
-//     [HttpGet("/classname/new")]
-//     public ActionResult New()
-//     {
-//       return View();
-//     }
+    [HttpGet("/vendors/{vendorId}/orders/{orderId}")]
+    public ActionResult Show(int vendorId, int orderId)
+    {
+      Order order = Order.Find(orderId);
+      Vendor vendor = Vendor.Find(vendorId);
+      Dictionary<string, object> model = new Dictionary<string, object>();
+      model.Add("order", order);
+      model.Add("vendor", vendor);
+      return View(model);
+    }
 
-//     [HttpPost("/classname")]
-//     public ActionResult Create(string classDescription)
-//     {
-//       Class newClass = new Class(classDescription);
-//       return RedirectToAction("Index");
-//     }
-
-//     [HttpGet("/classname/{id}")]
-//     public ActionResult Show(int id)
-//     {
-//       Class foundClass = Class.Find(id);
-//       return View(foundClass);
-//     }
-
-//     [HttpPost("/classname/delete")]
-//     public ActionResult DeleteAll()
-//     {
-//       Class.ClearAll();
-//       return View();
-//     }
+    [HttpPost("orders/delete")]
+    public ActionResult DeleteAll()
+    {
+      Order.ClearAll();
+      return View();
+    }
+  }
+}
