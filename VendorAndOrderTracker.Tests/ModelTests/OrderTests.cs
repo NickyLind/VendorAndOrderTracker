@@ -15,5 +15,14 @@ namespace VendorAndOrderTracker.Tests
       Order newOrder = new Order("pancakes");
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
+
+    [TestMethod]
+    public void GetDescription_ReturnsDescriptionOfOrder_String()
+    {
+      string description = "pineapple";
+      Order newOrder = new Order(description);
+      string result = newOrder.Description;
+      Assert.AreEqual(description, result);
+    }
   }
 }
