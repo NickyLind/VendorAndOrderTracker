@@ -13,6 +13,14 @@ body {
   background-size: 75%;
 }
 
+.money  {
+  display: inline;
+}
+
+.orderDescription {
+  margin-left: 50px;
+}
+
 body image  {
   margin-top: 400px;
 }
