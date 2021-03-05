@@ -1,9 +1,13 @@
-div#footer {
-  position:fixed;
-  bottom:0px;
-  left:0px;
-  width:100%;
-  color:#CCC;
-  background:#333;
-  padding:8px;
+.container  {
+background-color: rgb(144, 230, 230);
+border-radius: 20px;
 }
+
+body {
+background-color: rgb(238, 217, 191);
+}
+
+body a {
+  color:rgb(49, 113, 154)
+}
+
