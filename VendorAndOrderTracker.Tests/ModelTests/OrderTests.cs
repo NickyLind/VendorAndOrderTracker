@@ -57,6 +57,18 @@ namespace VendorAndOrderTracker.Tests
     }
 
     [TestMethod]
+    public void GetId_ReturnsOrderId_Int()
+    {
+      string name = "test Order";
+      string description = "test Order";
+      int price = 15;
+      string date = "test Order";
+      Order newOrder = new Order(name, description, price, date);
+      int result = newOrder.Id;
+      Assert.AreEqual(1, result);
+    }
+
+    [TestMethod]
     public void GetAll_ReturnsOrders_OrderList()
     {
       string name01 = "name1";
