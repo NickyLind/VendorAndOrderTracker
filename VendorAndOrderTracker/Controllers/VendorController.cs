@@ -50,26 +50,11 @@ namespace VendorAndOrderTracker.Controllers
       return View("Show", model);
     }
 
-    [HttpPost("/vendors/delete")]
-    public ActionResult DeleteVendor(int vendorId)
-    {
-      Vendor.DeleteVendor(vendorId);
-      return View();
-    }
-
     [HttpPost("/vendors/{vendorId}/orders/delete")]
     public ActionResult DeleteAll(int vendorId)
     {
       Vendor vendor = Vendor.Find(vendorId);
       vendor.Orders.Clear();
-      return View();
-    }
-
-    [HttpPost("/vendors/{vendorId}/orders/{orderId}/delete")]
-    public ActionResult DeleteOrder(int vendorId, int orderId)
-    {
-      Vendor vendor = Vendor.Find(vendorId);
-      Vendor.DeleteOrder(vendorId, orderId);
       return View();
     }
   }

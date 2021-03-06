@@ -33,7 +33,7 @@ _This application will use RESTful routing to layout a website where a user can 
 
 ## Known Bugs
 
-* _Bug where if you clear a vendor, because I use RemoveAt to do so,  renumbers everything in `_instances` list so that they are now trying to display the wrong the Ids in the URL path that they had previously_
+* _Bug where if you clear one vendor or order at a time, because I use RemoveAt to do so,  renumbers everything in `_instances` list so that they are now trying to display the wrong the Ids in the URL path that they had previously. This means it tries to either show a page that is out of the list index range or remove a vendor/order that is out of the list index range dependent on what action you take_
 * _Feel free to let me know what you find!_
 
 ## License
