@@ -15,6 +15,9 @@
 <p><a href='/vendors/@Model["vendor"].Id/orders/new'>Add</a> a new order to this vendor</p>
 <p>Return to <a href="/vendors">vendor list</a></p>
 <p>Return <a href="/">Home</a></p>
-<form action='/orders/delete' method="POST">
+<form action='/vendors/@Model["vendor"].Id/orders/delete' method="POST">
   <button type="submit">Clear all orders</button>
+</form>
+<form action="/vendors/delete" method="POST">
+  <button type="submit">Remove this Vendor</button>
 </form>
