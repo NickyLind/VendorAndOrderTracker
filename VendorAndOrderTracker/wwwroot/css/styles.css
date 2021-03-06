@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'quicksandregular';
+  src: url('quicksand-regular-webfont.woff2') format('woff2'),
+  url('quicksand-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
 .container  {
   background-color: #DDB892;
   border-radius: 20px;
@@ -5,7 +14,7 @@
 
 body {
   background-color: #EDE0D4;
-  font-family: quicksand-regular-webfont;
+  font-family: 'quicksandregular' ;
   background-image: url(./../img/bakery.jpeg);
   background-repeat: no-repeat;
   background-position: center center;
