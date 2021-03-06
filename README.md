@@ -33,7 +33,7 @@ _This application will use RESTful routing to layout a website where a user can 
 
 ## Known Bugs
 
-* _N/A_
+* _There is a bug where the button to clear all orders for a vendor redirects to the delete page but does not actually clear the orders_
 * _Feel free to let me know what you find!_
 
 ## License
