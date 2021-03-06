@@ -33,7 +33,7 @@ _This application will use RESTful routing to layout a website where a user can 
 
 ## Known Bugs
 
-* _There is a bug where the button to clear all orders for a vendor redirects to the delete page but does not actually clear the orders_
+* _Bug where if you clear a vendor, because I use RemoveAt to do so,  renumbers everything in `_instances` list so that they are now trying to display the wrong the Ids in the URL path that they had previously_
 * _Feel free to let me know what you find!_
 
 ## License
