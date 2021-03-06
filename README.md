@@ -10,6 +10,7 @@
 * _C#_
 * _Visual Studio Code_
 * _ASP NET Core MVC_
+* _Razor_
 
 ## Description
 
